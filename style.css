@@ -1,82 +1,114 @@
-body,h1,h2,h3,p,ul,li{
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+li {
     margin: 0;
     padding: 0;
-    
-}
-body{
-    font-family: 'Times New Roman', Times, serif;
-    background-color: rgb(195,189,168);
 }
 
-header{
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: rgb(195, 189, 168);
+}
+
+header {
+    width: 100vw;
+    margin: 5px auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 16px 5%;
     background-color: #b0ab98;
     position: relative;
-    z-index:2;
-}
-header img{
-    width: 500px ;
+    z-index: 2;
 }
 
-nav ul{
-    list-style-type: none; /*remove a numeração*/
-    display: flex; /*transforma o conteudo dentro do header em um flex container*/
-    gap: 16px; /*definir o espaçamento entre os itens filhos de um container que usa display: flex*/
-    
+header img {
+    width: 30%;
 }
-nav a{
-    text-decoration: none;/*remove a linha dos links*/
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    width: 90vw;
+}
+
+nav ul {
+
+    list-style-type: none;
+    /*remove a numeração*/
+    display: flex;
+    /*transforma o conteudo dentro do header em um flex container*/
+
+    gap: 16px;
+    /*definir o espaçamento entre os itens filhos de um container que usa display: flex*/
+
+}
+
+nav a {
+    text-decoration: none;
+    /*remove a linha dos links*/
     color: black;
     padding: 15px;
     border: 20px;
 }
-nav a:hover{
+
+nav a:hover {
     text-decoration: none;
     padding: 15px;
     color: white;
-    
+
 }
+
 /*DROPDOWN*/
-.menu>li>a{
+.menu>li>a {
     display: flex;
     list-style: none;
     border: 2px solid;
 }
-.dropdown{
+
+.dropdown {
     position: relative;
 }
 
-.dropdown a{
+.dropdown a {
     display: block;
     color: black;
     text-decoration: none;
     padding: 15px;
 }
-.dropdown .Conteudo{
-    display: none; /*Esconde o menu*/
-    background-color: hsl(0,0%, 95%);
+
+.dropdown .Conteudo {
+    display: none;
+    /*Esconde o menu*/
+    background-color: hsl(0, 0%, 95%);
     position: absolute;
     min-width: 100px;
     box-shadow: 2px 2px 5px hsla(0, 0%, 0%, 0.8);
     z-index: 10;
 }
-.dropdown:hover .Conteudo{
+
+.dropdown:hover .Conteudo {
     display: block;
-    background-color:	#c3bda8;
+    background-color: #c3bda8;
 }
+
 /*aqui termina a configuração do menu*/
 
-#Banner{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+main {
+    padding: 16px 5%;
 }
 
-main{
-    padding: 16px 5%;
+#Banner {
+    position: relative;
+    background-image: url(./imgNier/menuGame.png);
+    height: 700px;
+    background-position: center;
+
+
 }
 
 .personagem {
@@ -90,7 +122,7 @@ main{
     max-width: 400px;
     height: auto;
     border-radius: 8px;
-    
+
 }
 
 .descricao {
@@ -107,60 +139,167 @@ main{
 }
 
 
-.voltar img{
+.voltar img {
     position: fixed;
     bottom: 30px;
     right: 0px;
     padding: 10px 15px;
     width: 150px;
     opacity: 50%;
+    margin: auto;
 }
 
-section{
+section {
     margin: 50px;
     padding: 20px;
 }
-section p{
+
+section p {
     text-align: justify;
     color: black;
     font-size: 14pt;
     padding: 20px;
 }
-section h2{
+
+section h2 {
     padding: 20px;
     color: white;
     background-color: #594e4a;
 }
-section h3{
+
+section h3 {
     padding: 20px;
-    background-color:#b8b29d ;
+    background-color: #b8b29d;
 }
-.Galeria{
+
+.Galeria {
     display: flex;
     justify-content: space-around;
     align-items: center;
     gap: 10px;
     flex-wrap: wrap;
 }
-.Galeria img{
+
+.Galeria img {
     width: 600px;
     height: 500px;
 }
-footer{
-    height: 300px;
-    background-color:#4b413d;
+
+footer {
+    height: 200px;
+    background-color: #4b413d;
     padding: 16px 5%;
     display: flex;
     align-items: center;
 }
 
-footer p{
-    color: white;   
+footer p {
+    color: white;
     font-size: 14pt;
 }
+
 @media screen and (max-width:768px) {
-    header, main, footer5{
-        padding: 1rem 5%;
+
+    header {
+        width: 100vw;
+        margin: 5px auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 16px 5%;
+        background-color: #b0ab98;
+        position: relative;
+        z-index: 2;
     }
-    
+
+    header img {
+        width: 30%;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-around;
+
+        width: 100vw;
+    }
+
+    nav ul {
+
+        list-style-type: none;
+        /*remove a numeração*/
+        display: flex;
+        /*transforma o conteudo dentro do header em um flex container*/
+
+        gap: 16px;
+        /*definir o espaçamento entre os itens filhos de um container que usa display: flex*/
+
+    }
+
+    nav ul li {
+        font-size: 60%;
+    }
+
+    nav a {
+        text-decoration: none;
+        /*remove a linha dos links*/
+        color: black;
+        padding: 15px;
+        border: 20px;
+    }
+
+    nav a:hover {
+        text-decoration: none;
+        padding: 15px;
+        color: white;
+
+    }
+
+    /*DROPDOWN*/
+    .menu>li>a {
+        display: flex;
+        list-style: none;
+        border: 2px solid;
+    }
+
+    .dropdown {
+        position: relative;
+    }
+
+    .dropdown a {
+        display: block;
+        color: black;
+        text-decoration: none;
+        padding: 15px;
+    }
+
+    .dropdown .Conteudo {
+        display: none;
+        /*Esconde o menu*/
+        background-color: hsl(0, 0%, 95%);
+        position: absolute;
+        min-width: 100px;
+        box-shadow: 2px 2px 5px hsla(0, 0%, 0%, 0.8);
+        z-index: 10;
+    }
+
+    .dropdown:hover .Conteudo {
+        display: block;
+        background-color: #c3bda8;
+    }
+
+    /*aqui termina a configuração do menu*/
+
+    main {
+        padding: 16px 5%;
+    }
+
+    #Banner {
+        position: relative;
+        background-image: url(./imgNier/menuGame.png);
+        height: 700px;
+        background-position: center;
+
+
+    }
+
 }
