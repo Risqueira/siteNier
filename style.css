@@ -159,6 +159,7 @@ section p {
     color: black;
     font-size: 14pt;
     padding: 20px;
+    margin-top: 10px;
 }
 
 section h2 {
@@ -198,7 +199,7 @@ footer p {
     font-size: 14pt;
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width: 768px) {
 
     header {
         width: 100vw;
@@ -292,14 +293,56 @@ footer p {
     main {
         padding: 16px 5%;
     }
-
     #Banner {
         position: relative;
         background-image: url(./imgNier/menuGame.png);
         height: 700px;
         background-position: center;
+    }
+    
+    /*Parte do sobre o site*/
+    #sobre{
+       width: 80%;
+       padding: 16px 24px;
+       margin: 0 auto;
+       text-align: center;
+    }
+    #sobre h2{
+        padding: 8px;
+        font-size: 18px;
+        text-align: center;
+    }
+    #sobre p{
+        font-size: 16px;
+        line-height: 1.6;
+        text-align: justify;
+    }
 
-
+    /*Historia do nier*/
+    #História{
+        width:80%;
+        padding: 16px 24px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    #História h2{
+        padding: 8px;
+        font-size: 18px;
+        text-align: center;
+    }
+    #História p{
+        font-size: 16px;
+        line-height: 1.6;
+        text-align: justify;
+    }
+    
+    /*Personagens*/
+    .personagem{
+        display: flex;
+        align-items: flex-start;
+        gap: 20px;
+        margin-bottom: 40px;
+        margin-left: 20pxbg;
     }
 
 }
