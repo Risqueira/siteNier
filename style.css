@@ -10,7 +10,8 @@ body {
 }
 
 header {
-    width: 100vw;
+    width: 100%;
+    /*width: 100vw; – Use width: 100% no header, nav e outros elementos grandes para evitar que eles ultrapassem os limites da tela.*/
     height: 200px;
     margin: 0px auto;
     display: flex;
@@ -56,7 +57,6 @@ nav a:hover {
     text-decoration: none;
     padding: 15px;
     color: white;
-
 }
 
 /*DROPDOWN*/
@@ -99,10 +99,14 @@ main {
 }
 
 #Banner {
-    position: relative;
-    background-image: url(./imgNier/menuGame.png);
-    height: 700px;
+     position: relative;
+    background-image: url(./imgNier/logo\ Yorha.png);
     background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 50vh;
+    width: 70vw; /* padrão para desktop */
+    margin: 0 auto;
 
 
 }
@@ -174,14 +178,16 @@ section h3 {
     background-color: #b8b29d;
 }
 
-#Gameplay{
+#Gameplay {
     display: flex;
     flex-direction: column;
 }
-.video{
+
+.video {
     display: flex;
     align-items: center;
     flex-direction: column;
+    margin: 10px;
 }
 
 .Galeria {
@@ -196,6 +202,47 @@ section h3 {
     width: 600px;
     height: 500px;
     margin-top: 35px;
+}
+
+#Formulario{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#Formulario form{
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+}
+
+#Formulario input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    margin-top: 8px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+#Formulario input[type="number"] {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    margin-top: 8px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+#Formulario input[type="submit"],
+#Formulario input[type="reset"] {
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: none;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
 }
 
 footer {
@@ -224,30 +271,33 @@ footer img {
 
     * {
         margin: 0;
-        padding: 0;
     }
 
     header {
-        width: 100vw;
-        margin: 5px auto;
+        width: 100%;
+        height: 100%;
+        margin: 2px auto;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 16px 5%;
+        flex-direction: column;
+        padding: 5px;
         background-color: #b0ab98;
         position: relative;
         z-index: 2;
     }
 
     header img {
-        width: 30%;
+        width: 80%;
+        height: 70%;
     }
 
     nav {
         display: flex;
         justify-content: space-around;
-
-        width: 100vw;
+        width: 100%;
+        overflow-x: auto;
+        margin-bottom: 10px;
     }
 
     nav ul {
@@ -256,22 +306,23 @@ footer img {
         /*remove a numeração*/
         display: flex;
         /*transforma o conteudo dentro do header em um flex container*/
-
         gap: 16px;
         /*definir o espaçamento entre os itens filhos de um container que usa display: flex*/
-
+        justify-content: center;
+        gap: 16px;
+        padding: 0;
+        margin: 0;
     }
 
     nav ul li {
-        font-size: 60%;
+        font-size: 80%;
     }
 
     nav a {
         text-decoration: none;
-        /*remove a linha dos links*/
         color: black;
         padding: 15px;
-        border: 20px;
+        border: 15px;
     }
 
     nav a:hover {
@@ -286,47 +337,55 @@ footer img {
         display: flex;
         list-style: none;
         border: 2px solid;
+        
     }
 
     .dropdown {
         position: relative;
     }
 
+
     .dropdown a {
         display: block;
         color: black;
         text-decoration: none;
         padding: 15px;
+        cursor: pointer;
     }
 
     .dropdown .Conteudo {
         display: none;
         /*Esconde o menu*/
         background-color: hsl(0, 0%, 95%);
-        position: absolute;
+        position: static;
         min-width: 100px;
         box-shadow: 2px 2px 5px hsla(0, 0%, 0%, 0.8);
         z-index: 10;
+
     }
 
-    .dropdown:hover .Conteudo {
+    .dropdown:focus-within .Conteudo {
         display: block;
         background-color: #c3bda8;
     }
 
     /*aqui termina a configuração do menu*/
 
+    body {
+        overflow-x: hidden;
+    }
+
     main {
-        width: 100vw;
+        width: 100%;
         margin: 0 auto;
         padding: 20px;
     }
 
     #Banner {
-        position: relative;
-        background-image: url(./imgNier/menuGame.png);
-        height: 700px;
-        background-position: center;
+        background-image: url(./imgNier/nier-automata-yorha.png);
+        width: 90vw;
+        height: 50vh;
+
     }
 
     /*Parte do sobre o site*/
@@ -425,26 +484,55 @@ footer img {
         text-align: center;
     }
 
+    .video {
+        position: relative;
+        width: 100%;
+        max-width: 750px;
+        margin: 20px auto;
+        /* centraliza horizontalmente */
+        aspect-ratio: 16 / 9;
+        overflow: hidden;
+    }
+
+    .video iframe {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        border: 0;
+    }
+
     .Galeria {
         display: flex;
         flex-direction: column;
         align-items: center;
-        max-width: 120%;
+        max-width: 100%;
         margin: 0 auto 30px;
     }
 
     .Galeria img {
-        max-width: 90%;
+        width: 100%;
+        max-width: 600px;
         height: auto;
-        margin: 10px 0;
         border-radius: 10px;
     }
+
+    .voltar img {
+        display: block;
+        width: 80px;
+        right: 10px;
+        bottom: 10px;
+    }
+
+    
 
     footer {
         flex-direction: column;
         text-align: center;
-        height: 90%;
-        width: 100vw;
+        width: 100%;
+        height: 100%;
+        padding: 16px 5%;
     }
 
     footer p {
