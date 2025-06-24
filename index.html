@@ -267,21 +267,31 @@
 
                 <div>
                     <label for="fnome">Nome completo:</label>
-                    <input type="text" name="fnome" id="fnome" placeholder="Xiru da Silva">
+                    <input type="text" name="fnome" id="fnome" placeholder="Xiru da Silva" required>
                 </div>
 
                 <br>
 
                 <div>
                     <label for="fnome">Email:</label>
-                    <input type="text" name="fnome" id="fnome" placeholder="xirudasilva@gmail.com">
+                    <input type="text" name="email" placeholder="xirudasilva@gmail.com" required pattern=".+@.+"
+                        title="O e-mail deve conter '@'" required>
                 </div>
 
                 <br>
 
                 <div>
-                    <label for="fnome">Numero de telefone:</label>
-                    <input type="number" name="fnome" id="fnome" placeholder="(55) 51 98989-2345">
+                    <label for="telefone">Numero de telefone:</label>
+                    <input type="tel" name="telefone" placeholder="Digite seu telefone"
+                        pattern="^\d+$|^\(\d{2}\) \d{5}-\d{4}$"
+                        title="Digite apenas números ou no formato (XX) XXXXX-XXXX" required>
+                </div>
+
+                <br>
+
+                <div>
+                    <label for="opiniao">Opinião:</label>
+                    <textarea id="opiniao" name="opiniao" placeholder="Digite sua opinião aqui..."></textarea>
                 </div>
 
                 <br>
