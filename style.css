@@ -207,7 +207,7 @@ section h3 {
     border-collapse: collapse;
     background-color: #f3f0e7;
     font-family: 'Times New Roman', Times, serif;
-    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .tabela-equipamentos th,
@@ -359,47 +359,52 @@ footer img {
 }
 
 /*configuraçao para telefone*/
-@media screen and (max-width: 768px), (max-device-width: 768px){
+@media screen and (max-width: 768px),
+(max-device-width: 768px) {
+
     /**/
     * {
         box-sizing: border-box;
     }
+
     /*confuraçºao do body*/
     body {
-    margin: 0;
-    padding: 0;
-}
+        margin: 0;
+        padding: 0;
+    }
 
     /*header do site*/
     header {
-    width: 100%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column;
-    padding: 16px 5%;
-    background-color: #b0ab98;
-    position: relative;
-    z-index: 2;
-    box-sizing: border-box;
-}
+        width: 400px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 16px 5%;
+        background-color: #b0ab98;
+        position: relative;
+        z-index: 2;
+        box-sizing: border-box;
+    }
 
     header img {
-        width: 60%;
+        width: 200px;
     }
 
     /*configuração das nav do header*/
     nav {
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
         width: 100%;
     }
 
     nav ul {
-        list-style-type: none;
+        list-style: none;
         display: flex;
         gap: 10px;
+        padding: 0;
+        margin: 0;
 
     }
 
@@ -407,7 +412,7 @@ footer img {
         text-decoration: none;
         color: black;
         padding: 15px;
-        border: 20px;
+        border: 2px solid black;
     }
 
     nav a:hover {
@@ -449,6 +454,7 @@ footer img {
     }
 
     /*aqui termina a configuração do menu*/
+
     /*configuração do main*/
     main {
         width: 100%;
@@ -569,7 +575,8 @@ footer img {
         margin: 0;
         line-height: 1.5;
     }
-/*configuração das tabela*/
+
+    /*configuração das tabela*/
     .tabela-equipamentos {
         width: 90%;
         margin: 30px auto;
@@ -722,7 +729,7 @@ footer img {
         align-items: center;
         background-color: #4b413d;
         padding: 16px 5%;
-        width: 100%;
+        width: 400px;
         height: auto;
     }
 
