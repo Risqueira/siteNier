@@ -380,6 +380,7 @@ footer img {
 
     /*header do site*/
     header {
+        max-width: 100%;
         width: 100%;
         margin: 0 auto;
         display: flex;
@@ -399,6 +400,7 @@ footer img {
     nav {
         display: flex;
         justify-content: center;
+        max-width: 100%;
         width: 100%;
     }
 
@@ -719,6 +721,7 @@ footer img {
 
     /*configuraçao do tamanho de area de texto de opniao*/
     textarea {
+        max-width: 100%;
         width: 200px;
         height: 80px;
     }
