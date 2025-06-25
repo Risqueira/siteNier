@@ -31,7 +31,7 @@ header img {
 nav {
     display: flex;
     justify-content: space-around;
-    width: 90vw;
+    width: 90%;
 }
 
 nav ul {
@@ -108,6 +108,7 @@ main {
     width: 70vw;
     margin: 0 auto;
 }
+
 /*configuraçoes geral das sections e elementos*/
 section {
     margin: 50px;
@@ -142,14 +143,8 @@ section h3 {
 }
 
 #sobre h2 {
-    padding: 8px;
+    padding: 20px;
     text-align: center;
-}
-
-#sobre p {
-    font-size: 16px;
-    line-height: 1.6;
-    text-align: justify;
 }
 
 
@@ -162,17 +157,17 @@ section h3 {
 }
 
 #História h2 {
-    
+
     text-align: center;
 }
 
-#História p {
-    font-size: 16px;
-    line-height: 1.6;
-    text-align: justify;
+/*configuração da section Personagem (centralizar o titulo)*/
+
+#Personagens h2 {
+    text-align: center;
 }
 
-/*configuração da section Personagens */
+/*configuração da div Personagens */
 .personagem {
     display: flex;
     align-items: flex-start;
@@ -187,6 +182,7 @@ section h3 {
     border-radius: 8px;
 
 }
+
 /*confiração da div descrição*/
 .descricao {
     display: flex;
@@ -205,6 +201,28 @@ section h3 {
     line-height: 1.5;
 }
 
+.tabela-equipamentos {
+    width: 90%;
+    margin: 30px auto;
+    border-collapse: collapse;
+    background-color: #f3f0e7;
+    font-family: 'Times New Roman', Times, serif;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.tabela-equipamentos th,
+.tabela-equipamentos td {
+    border: 1px solid #999;
+    padding: 12px 20px;
+    text-align: left;
+}
+
+.tabela-equipamentos th {
+    background-color: #594e4a;
+    color: white;
+}
+
+
 /*configuração da seta para voltar no inicio do site*/
 .voltar img {
     position: fixed;
@@ -215,32 +233,32 @@ section h3 {
     opacity: 50%;
     margin: auto;
 }
+
 /*configuração da section Gameplay*/
 #Gameplay {
     display: flex;
     flex-direction: column;
 }
+
 #Gameplay h2 {
     margin-bottom: 10px;
     text-align: center;
 }
 
+/*configuraçoes do div de videos na section Gameplay*/
 .video {
     display: flex;
     align-items: center;
     flex-direction: column;
     margin: 10px;
 }
-#GaleriaT{
-    display: flex;
-    flex-direction: column;
-    
-    margin: 0 auto 30px;
-}
+
+/*configuraçao da section GaleriaT (centralizar titulo)*/
 #GaleriaT h2 {
-    padding: 8px;
+    padding: 20px;
     text-align: center;
 }
+
 /*configuração da div Galeria*/
 .Galeria {
     display: flex;
@@ -257,6 +275,7 @@ section h3 {
     border-radius: 10px;
 }
 
+/*configuração do formulario*/
 #Formulario {
     display: flex;
     flex-direction: column;
@@ -271,6 +290,7 @@ section h3 {
     padding: 20px;
 }
 
+/*configuraçoes dos imput do formulario*/
 #Formulario input[type="text"] {
     width: 100%;
     padding: 12px;
@@ -300,6 +320,7 @@ section h3 {
     cursor: pointer;
 }
 
+/*configuração do label de opniao*/
 label[for="opiniao"] {
     display: block;
     text-align: left;
@@ -307,6 +328,7 @@ label[for="opiniao"] {
     font-weight: bold;
 }
 
+/*configuraçao do tamanho de area de texto de opniao*/
 textarea {
     width: 320px;
     /* largura aproximada para 40 caracteres */
@@ -314,6 +336,7 @@ textarea {
     /* altura aproximada para 5 linhas */
 }
 
+/*configuraçao do footer*/
 footer {
     display: flex;
     flex-direction: row;
@@ -321,7 +344,6 @@ footer {
     height: 200px;
     background-color: #4b413d;
     padding: 16px 5%;
-    display: flex;
     align-items: center;
 }
 
@@ -336,128 +358,132 @@ footer img {
     margin-right: 10px;
 }
 
+/*configuraçao para telefone*/
 @media screen and (max-width: 768px) {
 
-    * {
-        margin: 0;
-    }
-
+    /*header do site*/
     header {
         width: 100%;
         height: 100%;
-        margin: 2px auto;
+        margin: 0px auto;
         display: flex;
         justify-content: space-between;
         align-items: center;
         flex-direction: column;
-        padding: 5px;
+        padding: 16px 5%;
         background-color: #b0ab98;
         position: relative;
         z-index: 2;
     }
 
     header img {
-        width: 80%;
-        height: 70%;
+        width: 60%;
     }
 
+    /*configuração das nav do header*/
     nav {
         display: flex;
         justify-content: space-around;
         width: 100%;
-        overflow-x: auto;
-        margin-bottom: 10px;
     }
 
     nav ul {
-
         list-style-type: none;
-        /*remove a numeração*/
         display: flex;
-        /*transforma o conteudo dentro do header em um flex container*/
-        gap: 16px;
-        /*definir o espaçamento entre os itens filhos de um container que usa display: flex*/
-        justify-content: center;
-        gap: 16px;
-        padding: 0;
-        margin: 0;
-    }
+        gap: 10px;
 
-    nav ul li {
-        font-size: 80%;
     }
 
     nav a {
         text-decoration: none;
         color: black;
         padding: 15px;
-        border: 15px;
+        border: 20px;
     }
 
     nav a:hover {
         text-decoration: none;
         padding: 15px;
         color: white;
-
     }
 
-    /*DROPDOWN*/
+    /*inicio do menu*/
     .menu>li>a {
         display: flex;
         list-style: none;
         border: 2px solid;
-
     }
 
     .dropdown {
         position: relative;
     }
 
-
     .dropdown a {
         display: block;
         color: black;
         text-decoration: none;
         padding: 15px;
-        cursor: pointer;
     }
 
     .dropdown .Conteudo {
         display: none;
         /*Esconde o menu*/
         background-color: hsl(0, 0%, 95%);
-        position: static;
+        position: absolute;
         min-width: 100px;
         box-shadow: 2px 2px 5px hsla(0, 0%, 0%, 0.8);
         z-index: 10;
-
     }
 
-    .dropdown:focus-within .Conteudo {
+    .dropdown:hover .Conteudo {
         display: block;
         background-color: #c3bda8;
     }
 
     /*aqui termina a configuração do menu*/
 
-    body {
-        overflow-x: hidden;
-    }
-
+    /*configuração do main*/
     main {
         width: 100%;
         margin: 0 auto;
         padding: 20px;
     }
 
-    #Banner {
-        background-image: url(./imgNier/nier-automata-yorha.png);
-        width: 90vw;
-        height: 50vh;
 
+    /*configuração do section banner (foto abaixo do header)*/
+    #Banner {
+        position: relative;
+        background-image: url(./imgNier/nier-automata-yorha.png);
+        width: 100%;
+        height: 60vh;
     }
 
-    /*Parte do sobre o site*/
+    /*configuraçoes geral das sections e elementos*/
+    section {
+        margin: 50px;
+        padding: 20px;
+    }
+
+    section p {
+        text-align: justify;
+        justify-content: center;
+        color: black;
+        font-size: 15pt;
+        margin-top: 10px;
+    }
+
+    section h2 {
+        padding: 20px;
+        color: white;
+        background-color: #594e4a;
+    }
+
+    section h3 {
+        padding: 20px;
+        background-color: #b8b29d;
+    }
+
+    /*Parte da section sobre do site*/
     #sobre {
         display: flex;
         flex-direction: column;
@@ -466,103 +492,134 @@ footer img {
     }
 
     #sobre h2 {
-        padding: 8px;
+        padding: 20px;
         text-align: center;
     }
 
     #sobre p {
-        font-size: 16px;
-        line-height: 1.6;
         text-align: justify;
+        justify-content: center;
+        font-size: 15pt;
+        margin-top: 10px;
     }
 
-    /*Historia do nier*/
+
+    /*configuração da section História*/
     #História {
         display: flex;
         flex-direction: column;
-        align-items: center;
         max-width: 90%;
         margin: 0 auto 30px;
     }
 
     #História h2 {
-        padding: 8px;
         text-align: center;
     }
 
     #História p {
-        font-size: 16px;
-        line-height: 1.6;
         text-align: justify;
+        justify-content: center;
+        font-size: 15pt;
+        margin-top: 10px;
     }
 
-    /*Personagens*/
+    /*configuração da section Personagem (centralizar o titulo)*/
+
     #Personagens h2 {
-        padding: 8px;
         text-align: center;
     }
 
+    /*configuração da div Personagens */
     .personagem {
         display: flex;
-        flex-direction: column-reverse;
         align-items: center;
-        max-width: 90%;
-        margin: 0 auto 30px;
+        flex-direction: column-reverse;
+        margin-bottom: 40px;
+        margin-top: 50px;
     }
 
     .personagem img {
-        max-width: 100%;
+        max-width: 400px;
         height: auto;
-        margin: 10px;
+        border-radius: 8px;
+
+    }
+
+    /*confiração da div descrição*/
+    .descricao {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-width: 600px;
     }
 
     .descricao h3 {
-        margin-top: 16px;
-        text-align: center;
+        margin-top: 0 auto;
     }
 
     .descricao p {
-        font-size: 16px;
-        line-height: 1.6;
-        text-align: justify;
+        margin: 0;
+        line-height: 1.5;
+    }
+/*configuração das tabela*/
+    .tabela-equipamentos {
+        width: 90%;
+        margin: 30px auto;
+        border-collapse: collapse;
+        background-color: #f3f0e7;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     }
 
+    .tabela-equipamentos th,
+    .tabela-equipamentos td {
+        border: 1px solid #999;
+        padding: 12px 20px;
+        text-align: left;
+    }
+
+    .tabela-equipamentos th {
+        background-color: #594e4a;
+    }
+
+
+    /*configuração da seta para voltar no inicio do site*/
+    .voltar img {
+        position: fixed;
+        bottom: 30px;
+        right: 0px;
+        padding: 10px 15px;
+        width: 150px;
+        opacity: 40%;
+        margin: auto;
+    }
+
+    /*configuração da section Gameplay*/
     #Gameplay {
         display: flex;
         flex-direction: column;
         align-items: center;
-        max-width: 90%;
+        width: 90%;
         margin: 0 auto;
-
     }
 
     #Gameplay h2 {
-        margin-bottom: 10px;
         text-align: center;
     }
 
-    #Gameplay p {
-        font-size: 16px;
-        line-height: 1.6;
-        text-align: justify;
-    }
-
-    #GaleriaT h2 {
-        padding: 8px;
-        margin-bottom: 10px;
-        text-align: center;
-    }
-
+    /*configuraçoes do div de videos na section Gameplay*/
     .video {
+        display: flex;
         position: relative;
-        width: 100%;
-        max-width: 750px;
+        align-items: center;
+        flex-direction: column;
         margin: 20px auto;
-        /* centraliza horizontalmente */
-        aspect-ratio: 16 / 9;
+        width: 100%;
         overflow: hidden;
+        aspect-ratio: 16/9;
     }
 
+    /*configuraçao do video*/
     .video iframe {
         position: absolute;
         width: 100%;
@@ -572,51 +629,105 @@ footer img {
         border: 0;
     }
 
+    /*configuraçao da section GaleriaT (centralizar titulo)*/
+    #GaleriaT h2 {
+        padding: 20px;
+        text-align: center;
+    }
+
+    /*configuração da div Galeria*/
     .Galeria {
         display: flex;
-        flex-direction: column;
+        justify-content: center;
         align-items: center;
-        max-width: 100%;
-        margin: 0 auto 30px;
+        gap: 10px;
     }
 
     .Galeria img {
         width: 100%;
-        max-width: 600px;
         height: auto;
+        margin-top: 35px;
         border-radius: 10px;
     }
 
+    /*configuração do formulario*/
     #Formulario {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        max-width: 90%;
-        margin: 0 auto 30px;
-        background-color: #4b413d;
+        background-color: #594e4a;
     }
 
-    .voltar img {
-        display: block;
-        width: 80px;
-        right: 10px;
-        bottom: 10px;
-    }
-
-
-
-    footer {
-        flex-direction: column;
-        text-align: center;
+    #Formulario form {
         width: 100%;
+        padding: 20px;
+    }
+
+    /*configuraçoes dos imput do formulario*/
+    #Formulario input[type="text"] {
+        width: 100%;
+        padding: 12px;
+        font-size: 16px;
+        margin-top: 8px;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+    }
+
+    #Formulario input[type="tel"] {
+        width: 100%;
+        padding: 12px;
+        font-size: 16px;
+        margin-top: 8px;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+    }
+
+    #Formulario input[type="submit"],
+    #Formulario input[type="reset"] {
+        padding: 12px 24px;
+        font-size: 16px;
+        border-radius: 6px;
+        border: none;
+        background-color: #333;
+        color: white;
+        cursor: pointer;
+    }
+
+    /*configuração do label de opniao*/
+    label[for="opiniao"] {
+        display: block;
+        text-align: left;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+
+    /*configuraçao do tamanho de area de texto de opniao*/
+    textarea {
+        width: 200px;
+        height: 80px;
+    }
+
+    /*configuraçao do footer*/
+    footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         height: 100%;
+        background-color: #4b413d;
         padding: 16px 5%;
+        align-items: center;
     }
 
     footer p {
-        font-size: 12pt;
+        color: white;
+        font-size: 14pt;
     }
 
+    footer img {
+        height: auto 0;
+        width: 120px;
+        margin-right: 10px;
+    }
 
 }
