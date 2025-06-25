@@ -359,7 +359,7 @@ footer img {
 }
 
 /*configuraçao para telefone*/
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px), (max-device-width: 768px){
     /**/
     * {
         box-sizing: border-box;
