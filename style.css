@@ -362,12 +362,17 @@ footer img {
 @media screen and (max-width: 768px),
 (max-device-width: 768px) {
 
-    /**/
+    /*aplica para todos elementos da pagina*/
     * {
         box-sizing: border-box;
     }
+    /*impede de rolar a tela para o lado*/
+    html, body {
+    overflow-x: hidden; /* Isso impede o scroll lateral */
+    width: 100%;
+}
 
-    /*confuraçºao do body*/
+    /*aplicação para todo body, remove espaço padrao do navegador*/
     body {
         margin: 0;
         padding: 0;
@@ -375,15 +380,13 @@ footer img {
 
     /*header do site*/
     header {
-        width: 400px;
+        width: 100%;
         margin: 0 auto;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        padding: 16px 5%;
-        background-color: #b0ab98;
-        position: relative;
+        padding: 16px 16px;
         z-index: 2;
         box-sizing: border-box;
     }
@@ -412,7 +415,6 @@ footer img {
         text-decoration: none;
         color: black;
         padding: 15px;
-        border: 2px solid black;
     }
 
     nav a:hover {
@@ -444,7 +446,6 @@ footer img {
         /*Esconde o menu*/
         background-color: hsl(0, 0%, 95%);
         position: absolute;
-        box-shadow: 2px 2px 5px hsla(0, 0%, 0%, 0.8);
         z-index: 10;
     }
 
