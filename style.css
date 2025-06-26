@@ -9,7 +9,7 @@ body {
     background-color: rgb(195, 189, 168);
 }
 
-/*header do site*/
+/*configuraçao do header*/
 header {
     width: 100%;
     /*width: 100vw; – Use width: 100% no header, nav e outros elementos grandes para evitar que eles ultrapassem os limites da tela.*/
@@ -27,7 +27,7 @@ header {
 header img {
     width: 30%;
 }
-
+/*configuraçao das navegaçoes do header*/
 nav {
     display: flex;
     justify-content: space-around;
@@ -57,7 +57,7 @@ nav a:hover {
     color: white;
 }
 
-/*inicio do menu*/
+/*inicio do menu de conteudo*/
 .menu>li>a {
     display: flex;
     list-style: none;
@@ -90,7 +90,7 @@ nav a:hover {
     background-color: #c3bda8;
 }
 
-/*aqui termina a configuração do menu*/
+/*aqui termina a configuração do menu de conteudo*/
 
 /*configuração do main*/
 main {
@@ -134,7 +134,7 @@ section h3 {
     background-color: #b8b29d;
 }
 
-/*Parte da section sobre do site*/
+/*configuraçao da parte da section Sobre do site*/
 #sobre {
     display: flex;
     flex-direction: column;
@@ -162,7 +162,6 @@ section h3 {
 }
 
 /*configuração da section Personagem (centralizar o titulo)*/
-
 #Personagens h2 {
     text-align: center;
 }
@@ -201,6 +200,7 @@ section h3 {
     line-height: 1.5;
 }
 
+/*configuraçao da div tabelas dos equipamentos de personagem*/
 .tabela-equipamentos {
     width: 90%;
     margin: 30px auto;
